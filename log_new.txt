@@ -1,0 +1,874 @@
+Running command: mpiexec -n 2 /home/fuel/projects/begin/begin-opt Outputs/csv=true -i peacock_run_exe_tmp_M.i
+Working directory: /home/fuel/projects/begin
+
+
+
+
+*** Warning, This code is deprecated and will be removed in future versions!
+
+The parameter incremental_form is deprecated.
+This parameter no longer has any effect. Simply remove it.
+
+
+
+
+*** Warning ***
+The PETSc option -SNES_MF_OPERATOR should not be used directly in a MOOSE input file. Please set the solver type through "solve_type".
+
+
+
+
+
+*** Warning ***
+The PETSc option -KSP_MONITOR should not be used directly in a MOOSE input file. Please use "Outputs/print_linear_residuals=true"
+Framework Information:
+MOOSE Version:           git commit cbfe708 on 2018-07-24
+LibMesh Version:         4b120c7af7a95d45e4640afb2688cdba946a79c6
+PETSc Version:           3.8.3
+Current Time:            Sat Jul 28 09:48:09 2018
+Executable Timestamp:    Wed Jul 25 01:53:58 2018
+
+Parallelism:
+  Num Processors:          2
+  Num Threads:             1
+
+Mesh:
+  Parallel Type:           replicated
+  Mesh Dimension:          3
+  Spatial Dimension:       3
+  Nodes:
+    Total:                 7381
+    Local:                 3751
+  Elems:
+    Total:                 6000
+    Local:                 3000
+  Num Subdomains:          1
+  Num Partitions:          2
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                22143
+  Num Local DOFs:          11253
+  Variables:               { "disp_x" "disp_y" "disp_z" }
+  Finite Element Types:    "LAGRANGE"
+  Approximation Orders:    "FIRST"
+
+Auxiliary System:
+  Num DOFs:                47524
+  Num Local DOFs:          24004
+  Variables:               { "strain_yy" "strain_xx" "strain_zz" } { "test_temp" "residual_disp_x" "residual_disp_y"
+                             "residual_disp_z" }
+  Finite Element Types:    "MONOMIAL" "LAGRANGE"
+  Approximation Orders:    "CONSTANT" "FIRST"
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             ConstantDT
+  Solver Mode:             Preconditioned JFNK
+Time Step 0, time = 0
+                dt = 0
+Postprocessor Values:
++----------------+----------------+
+| time           | run_time       |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
++----------------+----------------+
+
+
+
+*** Warning ***
+/home/fuel/projects/begin/peacock_run_exe_tmp_M.i:208: unused parameter 'Preconditioning/smp/line_search'
+
+
+
+Time Step 1, time = 1
+                dt = 1
+    |residual|_2 of individual variables:
+                     disp_x: 8990.05
+                     disp_y: 16.1056
+                     disp_z: 646.603
+
+ 0 Nonlinear |R| = 9.013284e+03
+    0 KSP Residual norm 9.013284165597e+03
+    1 KSP Residual norm 1.430765089333e+02
+    2 KSP Residual norm 5.129092945829e+01
+    3 KSP Residual norm 9.617562571061e+00
+    4 KSP Residual norm 4.892719312899e+00
+    5 KSP Residual norm 2.434097691399e+00
+    6 KSP Residual norm 1.700657113324e+00
+    7 KSP Residual norm 1.239169111827e+00
+    8 KSP Residual norm 1.064106806702e+00
+    9 KSP Residual norm 9.222606404469e-01
+   10 KSP Residual norm 7.336051548685e-01
+   11 KSP Residual norm 5.986579483402e-01
+   12 KSP Residual norm 5.100433065848e-01
+   13 KSP Residual norm 4.781696857747e-01
+   14 KSP Residual norm 4.297494725914e-01
+   15 KSP Residual norm 3.876470414381e-01
+   16 KSP Residual norm 3.748184574890e-01
+   17 KSP Residual norm 3.477872144010e-01
+   18 KSP Residual norm 3.129515264613e-01
+   19 KSP Residual norm 2.820675884005e-01
+   20 KSP Residual norm 2.451544333833e-01
+   21 KSP Residual norm 2.251073371341e-01
+   22 KSP Residual norm 2.047100045331e-01
+   23 KSP Residual norm 1.905655079823e-01
+   24 KSP Residual norm 1.807076376790e-01
+   25 KSP Residual norm 1.719822010893e-01
+   26 KSP Residual norm 1.651038280722e-01
+   27 KSP Residual norm 1.586255002270e-01
+   28 KSP Residual norm 1.491390212634e-01
+   29 KSP Residual norm 1.396228066610e-01
+   30 KSP Residual norm 1.321357725091e-01
+   31 KSP Residual norm 1.316486635132e-01
+   32 KSP Residual norm 1.308876342520e-01
+   33 KSP Residual norm 1.257441279608e-01
+   34 KSP Residual norm 1.204111690487e-01
+   35 KSP Residual norm 1.173307991905e-01
+   36 KSP Residual norm 1.144591045729e-01
+   37 KSP Residual norm 1.117306039611e-01
+   38 KSP Residual norm 1.089860787253e-01
+   39 KSP Residual norm 1.057780617984e-01
+   40 KSP Residual norm 1.030933310520e-01
+   41 KSP Residual norm 1.002182757356e-01
+   42 KSP Residual norm 9.630180399797e-02
+   43 KSP Residual norm 8.846405840648e-02
+   44 KSP Residual norm 8.422423714633e-02
+   45 KSP Residual norm 8.044628860773e-02
+   46 KSP Residual norm 7.695027898844e-02
+   47 KSP Residual norm 7.406733290401e-02
+
+   48 KSP Residual norm 7.073982622054e-02
+   49 KSP Residual norm 6.551425103364e-02
+   50 KSP Residual norm 6.271417363616e-02
+    |residual|_2 of individual variables:
+                     disp_x: 0.062368
+                     disp_y: 0.0180314
+                     disp_z: 0.0372312
+
+ 1 Nonlinear |R| = 7.484027e-02
+    0 KSP Residual norm 7.484026666079e-02
+    1 KSP Residual norm 6.269277020568e-02
+    2 KSP Residual norm 6.258860907852e-02
+    3 KSP Residual norm 5.927875475577e-02
+
+    4 KSP Residual norm 5.753851465412e-02
+    5 KSP Residual norm 5.681212472171e-02
+    6 KSP Residual norm 5.568551257763e-02
+    7 KSP Residual norm 5.504757605298e-02
+    8 KSP Residual norm 5.310414826913e-02
+    9 KSP Residual norm 5.279529876055e-02
+   10 KSP Residual norm 5.172210915813e-02
+   11 KSP Residual norm 5.025172938773e-02
+   12 KSP Residual norm 4.753390011823e-02
+   13 KSP Residual norm 4.636592389825e-02
+   14 KSP Residual norm 4.511574965227e-02
+   15 KSP Residual norm 4.366610965440e-02
+   16 KSP Residual norm 4.272793340484e-02
+   17 KSP Residual norm 4.197229232734e-02
+
+   18 KSP Residual norm 4.110895653268e-02
+   19 KSP Residual norm 4.009309777759e-02
+   20 KSP Residual norm 3.924831814707e-02
+   21 KSP Residual norm 3.782989278967e-02
+   22 KSP Residual norm 3.635778139034e-02
+   23 KSP Residual norm 3.476974686241e-02
+   24 KSP Residual norm 3.272188676811e-02
+
+   25 KSP Residual norm 3.074113600634e-02
+   26 KSP Residual norm 2.985946460415e-02
+   27 KSP Residual norm 2.876185582918e-02
+   28 KSP Residual norm 2.802724698155e-02
+   29 KSP Residual norm 2.741234019198e-02
+   30 KSP Residual norm 2.695916082154e-02
+   31 KSP Residual norm 2.686357365322e-02
+   32 KSP Residual norm 2.674578569890e-02
+   33 KSP Residual norm 2.633657983310e-02
+   34 KSP Residual norm 2.602003239505e-02
+   35 KSP Residual norm 2.583123703715e-02
+   36 KSP Residual norm 2.572437802128e-02
+
+   37 KSP Residual norm 2.542269754176e-02
+   38 KSP Residual norm 2.511540014345e-02
+   39 KSP Residual norm 2.475492317377e-02
+   40 KSP Residual norm 2.451060750844e-02
+   41 KSP Residual norm 2.404040277647e-02
+
+   42 KSP Residual norm 2.369811467184e-02
+   43 KSP Residual norm 2.345729375796e-02
+   44 KSP Residual norm 2.319674910971e-02
+   45 KSP Residual norm 2.278077015947e-02
+   46 KSP Residual norm 2.231173118802e-02
+
+   47 KSP Residual norm 2.208008193761e-02
+   48 KSP Residual norm 2.176602625602e-02
+   49 KSP Residual norm 2.133565530622e-02
+   50 KSP Residual norm 2.094489012488e-02
+    |residual|_2 of individual variables:
+                     disp_x: 0.0173326
+                     disp_y: 0.00269098
+                     disp_z: 0.0114468
+
+ 2 Nonlinear |R| = 2.094492e-02
+
+    0 KSP Residual norm 2.094491511778e-02
+    1 KSP Residual norm 2.089498767861e-02
+    2 KSP Residual norm 2.080988310956e-02
+    3 KSP Residual norm 2.043287568820e-02
+    4 KSP Residual norm 2.028546592328e-02
+    5 KSP Residual norm 2.014741683655e-02
+    6 KSP Residual norm 2.000791161889e-02
+    7 KSP Residual norm 1.986611674309e-02
+    8 KSP Residual norm 1.975773758745e-02
+
+    9 KSP Residual norm 1.961835653500e-02
+   10 KSP Residual norm 1.953297678463e-02
+
+   11 KSP Residual norm 1.930070937092e-02
+   12 KSP Residual norm 1.912204627806e-02
+   13 KSP Residual norm 1.898430842688e-02
+
+   14 KSP Residual norm 1.891109782125e-02
+   15 KSP Residual norm 1.879419410266e-02
+   16 KSP Residual norm 1.873185609163e-02
+   17 KSP Residual norm 1.861909725965e-02
+   18 KSP Residual norm 1.846117264474e-02
+
+   19 KSP Residual norm 1.829980129805e-02
+   20 KSP Residual norm 1.816953372277e-02
+   21 KSP Residual norm 1.750137868491e-02
+   22 KSP Residual norm 1.734400626777e-02
+   23 KSP Residual norm 1.711455651376e-02
+   24 KSP Residual norm 1.667058599695e-02
+   25 KSP Residual norm 1.634777765927e-02
+
+   26 KSP Residual norm 1.606441512749e-02
+   27 KSP Residual norm 1.570700243450e-02
+   28 KSP Residual norm 1.513100825075e-02
+   29 KSP Residual norm 1.476694186093e-02
+   30 KSP Residual norm 1.438702359772e-02
+
+   31 KSP Residual norm 1.427707686680e-02
+   32 KSP Residual norm 1.416895904329e-02
+   33 KSP Residual norm 1.373306534573e-02
+   34 KSP Residual norm 1.356854745220e-02
+   35 KSP Residual norm 1.333875115296e-02
+   36 KSP Residual norm 1.307706720088e-02
+   37 KSP Residual norm 1.268389968275e-02
+
+   38 KSP Residual norm 1.242664427634e-02
+   39 KSP Residual norm 1.231153898242e-02
+
+   40 KSP Residual norm 1.214583328663e-02
+   41 KSP Residual norm 1.208629838849e-02
+   42 KSP Residual norm 1.198425365412e-02
+
+   43 KSP Residual norm 1.176156536382e-02
+   44 KSP Residual norm 1.158801711837e-02
+   45 KSP Residual norm 1.152681583367e-02
+
+   46 KSP Residual norm 1.143471631714e-02
+   47 KSP Residual norm 1.135208957308e-02
+   48 KSP Residual norm 1.127821039066e-02
+   49 KSP Residual norm 1.123598271477e-02
+   50 KSP Residual norm 1.115704536654e-02
+    |residual|_2 of individual variables:
+                     disp_x: 0.00929701
+                     disp_y: 0.000410567
+                     disp_z: 0.00615439
+
+ 3 Nonlinear |R| = 1.115704e-02
+
+    0 KSP Residual norm 1.115704165978e-02
+
+    1 KSP Residual norm 1.115065340571e-02
+    2 KSP Residual norm 1.114451470211e-02
+
+    3 KSP Residual norm 1.111411056859e-02
+    4 KSP Residual norm 1.106443210593e-02
+    5 KSP Residual norm 1.099765389526e-02
+
+    6 KSP Residual norm 1.098146686935e-02
+    7 KSP Residual norm 1.095435378648e-02
+
+    8 KSP Residual norm 1.087315594027e-02
+    9 KSP Residual norm 1.081414044049e-02
+
+   10 KSP Residual norm 1.078490758237e-02
+   11 KSP Residual norm 1.073125866415e-02
+   12 KSP Residual norm 1.065619330781e-02
+   13 KSP Residual norm 1.052596163577e-02
+   14 KSP Residual norm 1.034658686654e-02
+   15 KSP Residual norm 1.014214559094e-02
+
+   16 KSP Residual norm 1.002816761689e-02
+   17 KSP Residual norm 9.949262189441e-03
+
+   18 KSP Residual norm 9.807493426114e-03
+   19 KSP Residual norm 9.686193164956e-03
+   20 KSP Residual norm 9.598680093852e-03
+   21 KSP Residual norm 9.298417521040e-03
+   22 KSP Residual norm 8.885906758173e-03
+   23 KSP Residual norm 8.706451853608e-03
+   24 KSP Residual norm 8.395755801282e-03
+   25 KSP Residual norm 7.974264253190e-03
+   26 KSP Residual norm 7.708662356191e-03
+   27 KSP Residual norm 7.640480418025e-03
+   28 KSP Residual norm 7.493662397168e-03
+   29 KSP Residual norm 7.169875968003e-03
+   30 KSP Residual norm 6.979417183629e-03
+   31 KSP Residual norm 6.950701626016e-03
+   32 KSP Residual norm 6.904557722854e-03
+   33 KSP Residual norm 6.794485497023e-03
+   34 KSP Residual norm 6.706596536954e-03
+   35 KSP Residual norm 6.608638325777e-03
+   36 KSP Residual norm 6.542289208764e-03
+   37 KSP Residual norm 6.449194317945e-03
+   38 KSP Residual norm 6.380951598260e-03
+   39 KSP Residual norm 6.338836186334e-03
+   40 KSP Residual norm 6.274423801135e-03
+   41 KSP Residual norm 6.246866226782e-03
+   42 KSP Residual norm 6.209390199483e-03
+   43 KSP Residual norm 6.174511474673e-03
+   44 KSP Residual norm 6.125770495854e-03
+   45 KSP Residual norm 6.114156877992e-03
+   46 KSP Residual norm 6.097843446260e-03
+
+   47 KSP Residual norm 6.068509987998e-03
+
+   48 KSP Residual norm 6.052149060405e-03
+   49 KSP Residual norm 6.015435478824e-03
+   50 KSP Residual norm 5.995043479006e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.00497704
+                     disp_y: 0.000395534
+                     disp_z: 0.0033186
+ 4 Nonlinear |R| = 5.995041e-03
+
+    0 KSP Residual norm 5.995040767558e-03
+    1 KSP Residual norm 5.994557482472e-03
+    2 KSP Residual norm 5.993302045331e-03
+    3 KSP Residual norm 5.989798627070e-03
+    4 KSP Residual norm 5.986222434776e-03
+    5 KSP Residual norm 5.976651148347e-03
+    6 KSP Residual norm 5.968781923099e-03
+    7 KSP Residual norm 5.951352179525e-03
+    8 KSP Residual norm 5.940706502551e-03
+    9 KSP Residual norm 5.933818579913e-03
+   10 KSP Residual norm 5.924541400225e-03
+
+   11 KSP Residual norm 5.906828898113e-03
+   12 KSP Residual norm 5.901649028407e-03
+   13 KSP Residual norm 5.889658850936e-03
+   14 KSP Residual norm 5.827559649785e-03
+   15 KSP Residual norm 5.739181352568e-03
+   16 KSP Residual norm 5.686356802158e-03
+   17 KSP Residual norm 5.632385529048e-03
+   18 KSP Residual norm 5.618113710141e-03
+   19 KSP Residual norm 5.611617542042e-03
+   20 KSP Residual norm 5.608722593327e-03
+   21 KSP Residual norm 5.588066767102e-03
+   22 KSP Residual norm 5.558104165263e-03
+   23 KSP Residual norm 5.529086643514e-03
+
+   24 KSP Residual norm 5.519522737151e-03
+   25 KSP Residual norm 5.508126495833e-03
+   26 KSP Residual norm 5.474380700352e-03
+   27 KSP Residual norm 5.458145879603e-03
+   28 KSP Residual norm 5.453747599226e-03
+   29 KSP Residual norm 5.420508745331e-03
+   30 KSP Residual norm 5.397504860268e-03
+   31 KSP Residual norm 5.397061112927e-03
+   32 KSP Residual norm 5.396412310161e-03
+   33 KSP Residual norm 5.395223749231e-03
+   34 KSP Residual norm 5.392829347457e-03
+   35 KSP Residual norm 5.380718379888e-03
+   36 KSP Residual norm 5.364203981527e-03
+   37 KSP Residual norm 5.344092369637e-03
+   38 KSP Residual norm 5.333676118413e-03
+   39 KSP Residual norm 5.327738287177e-03
+   40 KSP Residual norm 5.316231869044e-03
+   41 KSP Residual norm 5.302208890461e-03
+   42 KSP Residual norm 5.296702401076e-03
+   43 KSP Residual norm 5.286660053011e-03
+   44 KSP Residual norm 5.268460288907e-03
+   45 KSP Residual norm 5.248557763933e-03
+   46 KSP Residual norm 5.231466389080e-03
+   47 KSP Residual norm 5.189807122037e-03
+   48 KSP Residual norm 5.163476875482e-03
+   49 KSP Residual norm 5.158445277527e-03
+   50 KSP Residual norm 5.156072971675e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.00430433
+                     disp_y: 0.000198391
+                     disp_z: 0.00283169
+
+ 5 Nonlinear |R| = 5.156073e-03
+
+    0 KSP Residual norm 5.156073036688e-03
+    1 KSP Residual norm 5.156042381467e-03
+    2 KSP Residual norm 5.155937255929e-03
+    3 KSP Residual norm 5.154451904896e-03
+    4 KSP Residual norm 5.153291421756e-03
+    5 KSP Residual norm 5.143540005951e-03
+    6 KSP Residual norm 5.127732756121e-03
+    7 KSP Residual norm 5.118416031459e-03
+    8 KSP Residual norm 5.114347655390e-03
+    9 KSP Residual norm 5.111834197892e-03
+   10 KSP Residual norm 5.108078713525e-03
+   11 KSP Residual norm 5.092620105547e-03
+   12 KSP Residual norm 5.068421735995e-03
+   13 KSP Residual norm 5.035147639981e-03
+   14 KSP Residual norm 4.978789494543e-03
+   15 KSP Residual norm 4.923592691217e-03
+   16 KSP Residual norm 4.876891754190e-03
+   17 KSP Residual norm 4.843394490948e-03
+   18 KSP Residual norm 4.818064019374e-03
+   19 KSP Residual norm 4.795024374330e-03
+   20 KSP Residual norm 4.778927477441e-03
+   21 KSP Residual norm 4.717082266675e-03
+   22 KSP Residual norm 4.640336797224e-03
+   23 KSP Residual norm 4.596367129472e-03
+   24 KSP Residual norm 4.563892140599e-03
+   25 KSP Residual norm 4.527017565284e-03
+
+   26 KSP Residual norm 4.492069976402e-03
+   27 KSP Residual norm 4.432397111775e-03
+   28 KSP Residual norm 4.373914148861e-03
+
+   29 KSP Residual norm 4.350902071902e-03
+
+   30 KSP Residual norm 4.336334423595e-03
+   31 KSP Residual norm 4.335721935722e-03
+   32 KSP Residual norm 4.333743528087e-03
+   33 KSP Residual norm 4.326272646342e-03
+   34 KSP Residual norm 4.320980422281e-03
+   35 KSP Residual norm 4.304379222126e-03
+   36 KSP Residual norm 4.290201322546e-03
+
+   37 KSP Residual norm 4.264949361161e-03
+   38 KSP Residual norm 4.244872336475e-03
+   39 KSP Residual norm 4.179731562585e-03
+   40 KSP Residual norm 4.141426177472e-03
+   41 KSP Residual norm 4.112143241143e-03
+   42 KSP Residual norm 4.079830020076e-03
+   43 KSP Residual norm 4.036356719231e-03
+   44 KSP Residual norm 4.017547752032e-03
+   45 KSP Residual norm 4.012273232209e-03
+   46 KSP Residual norm 4.006741839841e-03
+   47 KSP Residual norm 4.003375578220e-03
+   48 KSP Residual norm 3.997979873597e-03
+   49 KSP Residual norm 3.996304637493e-03
+   50 KSP Residual norm 3.996149275759e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.00332258
+                     disp_y: 0.00020824
+                     disp_z: 0.0022105
+
+ 6 Nonlinear |R| = 3.996149e-03
+    0 KSP Residual norm 3.996149081978e-03
+    1 KSP Residual norm 3.996149017422e-03
+    2 KSP Residual norm 3.996148619191e-03
+    3 KSP Residual norm 3.996133870621e-03
+    4 KSP Residual norm 3.996131152266e-03
+    5 KSP Residual norm 3.996073650606e-03
+    6 KSP Residual norm 3.995890363890e-03
+    7 KSP Residual norm 3.995629453030e-03
+    8 KSP Residual norm 3.995050015488e-03
+    9 KSP Residual norm 3.991007790879e-03
+   10 KSP Residual norm 3.983242218259e-03
+   11 KSP Residual norm 3.972587589661e-03
+   12 KSP Residual norm 3.963249060844e-03
+   13 KSP Residual norm 3.957677666880e-03
+   14 KSP Residual norm 3.951845454407e-03
+   15 KSP Residual norm 3.941775213661e-03
+   16 KSP Residual norm 3.932563270777e-03
+
+   17 KSP Residual norm 3.925610303902e-03
+   18 KSP Residual norm 3.922478315641e-03
+   19 KSP Residual norm 3.920822881411e-03
+
+   20 KSP Residual norm 3.917363519605e-03
+   21 KSP Residual norm 3.907836367014e-03
+   22 KSP Residual norm 3.896061534057e-03
+   23 KSP Residual norm 3.880331227225e-03
+   24 KSP Residual norm 3.859354941944e-03
+
+   25 KSP Residual norm 3.831154952589e-03
+   26 KSP Residual norm 3.820479622036e-03
+   27 KSP Residual norm 3.802775226201e-03
+
+   28 KSP Residual norm 3.767216622079e-03
+   29 KSP Residual norm 3.713519401871e-03
+   30 KSP Residual norm 3.701168133555e-03
+   31 KSP Residual norm 3.701067977208e-03
+
+   32 KSP Residual norm 3.700375052553e-03
+   33 KSP Residual norm 3.697017276621e-03
+   34 KSP Residual norm 3.696182951561e-03
+   35 KSP Residual norm 3.695017644714e-03
+
+   36 KSP Residual norm 3.693420011871e-03
+   37 KSP Residual norm 3.690865762495e-03
+   38 KSP Residual norm 3.689202915472e-03
+   39 KSP Residual norm 3.686834360059e-03
+
+   40 KSP Residual norm 3.682419338710e-03
+   41 KSP Residual norm 3.670242092090e-03
+   42 KSP Residual norm 3.646410122571e-03
+   43 KSP Residual norm 3.625662943871e-03
+
+   44 KSP Residual norm 3.612605500736e-03
+   45 KSP Residual norm 3.599420884746e-03
+   46 KSP Residual norm 3.576804823919e-03
+   47 KSP Residual norm 3.565002490495e-03
+   48 KSP Residual norm 3.559533842776e-03
+   49 KSP Residual norm 3.555200828963e-03
+
+   50 KSP Residual norm 3.547912269054e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.00293249
+                     disp_y: 0.000228171
+                     disp_z: 0.00198396
+
+ 7 Nonlinear |R| = 3.547912e-03
+    0 KSP Residual norm 3.547912393487e-03
+
+    1 KSP Residual norm 3.547792694802e-03
+    2 KSP Residual norm 3.547588202709e-03
+    3 KSP Residual norm 3.546232890507e-03
+    4 KSP Residual norm 3.545440625017e-03
+    5 KSP Residual norm 3.542910146674e-03
+    6 KSP Residual norm 3.541100192038e-03
+    7 KSP Residual norm 3.537013607268e-03
+
+    8 KSP Residual norm 3.529737527095e-03
+    9 KSP Residual norm 3.514501466817e-03
+   10 KSP Residual norm 3.503946135041e-03
+   11 KSP Residual norm 3.492180152104e-03
+
+   12 KSP Residual norm 3.465395009425e-03
+   13 KSP Residual norm 3.452458532749e-03
+   14 KSP Residual norm 3.444037498633e-03
+   15 KSP Residual norm 3.430977531242e-03
+   16 KSP Residual norm 3.420241711596e-03
+   17 KSP Residual norm 3.413678605149e-03
+   18 KSP Residual norm 3.411099917834e-03
+
+   19 KSP Residual norm 3.409473825943e-03
+   20 KSP Residual norm 3.408200280923e-03
+   21 KSP Residual norm 3.387536732375e-03
+   22 KSP Residual norm 3.368992535286e-03
+   23 KSP Residual norm 3.316702926041e-03
+   24 KSP Residual norm 3.256631252710e-03
+   25 KSP Residual norm 3.181390129603e-03
+   26 KSP Residual norm 3.112280515088e-03
+   27 KSP Residual norm 3.038225238006e-03
+   28 KSP Residual norm 2.957519780677e-03
+   29 KSP Residual norm 2.863274654154e-03
+
+   30 KSP Residual norm 2.833111329895e-03
+   31 KSP Residual norm 2.832581161600e-03
+   32 KSP Residual norm 2.829974242645e-03
+   33 KSP Residual norm 2.824663723459e-03
+   34 KSP Residual norm 2.822803302305e-03
+   35 KSP Residual norm 2.821209729728e-03
+   36 KSP Residual norm 2.819707197116e-03
+
+   37 KSP Residual norm 2.813546228241e-03
+   38 KSP Residual norm 2.810676586162e-03
+   39 KSP Residual norm 2.803391730860e-03
+   40 KSP Residual norm 2.786242488440e-03
+   41 KSP Residual norm 2.756751049403e-03
+   42 KSP Residual norm 2.723143213464e-03
+   43 KSP Residual norm 2.680467217357e-03
+   44 KSP Residual norm 2.668952566714e-03
+   45 KSP Residual norm 2.655053139072e-03
+   46 KSP Residual norm 2.632890632076e-03
+   47 KSP Residual norm 2.625073668348e-03
+   48 KSP Residual norm 2.603967379462e-03
+
+   49 KSP Residual norm 2.572793526124e-03
+   50 KSP Residual norm 2.554478883412e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.0020972
+                     disp_y: 0.000325835
+                     disp_z: 0.0014216
+
+ 8 Nonlinear |R| = 2.554479e-03
+    0 KSP Residual norm 2.554478637685e-03
+
+    1 KSP Residual norm 2.554167079114e-03
+    2 KSP Residual norm 2.553268469921e-03
+    3 KSP Residual norm 2.549628868320e-03
+    4 KSP Residual norm 2.548257056946e-03
+    5 KSP Residual norm 2.544568857448e-03
+    6 KSP Residual norm 2.540877512139e-03
+    7 KSP Residual norm 2.532034176913e-03
+    8 KSP Residual norm 2.524196708783e-03
+    9 KSP Residual norm 2.514210322685e-03
+   10 KSP Residual norm 2.507232790487e-03
+   11 KSP Residual norm 2.488881426347e-03
+   12 KSP Residual norm 2.466673324105e-03
+   13 KSP Residual norm 2.455860299522e-03
+
+   14 KSP Residual norm 2.449232529662e-03
+   15 KSP Residual norm 2.445943776131e-03
+   16 KSP Residual norm 2.445048924901e-03
+   17 KSP Residual norm 2.445043431683e-03
+   18 KSP Residual norm 2.444949176574e-03
+   19 KSP Residual norm 2.444434171208e-03
+
+   20 KSP Residual norm 2.444232883661e-03
+   21 KSP Residual norm 2.434666781196e-03
+   22 KSP Residual norm 2.425798918625e-03
+   23 KSP Residual norm 2.411111600454e-03
+
+   24 KSP Residual norm 2.392096361598e-03
+   25 KSP Residual norm 2.375131551550e-03
+   26 KSP Residual norm 2.366703010438e-03
+   27 KSP Residual norm 2.355080028863e-03
+
+   28 KSP Residual norm 2.344932441145e-03
+   29 KSP Residual norm 2.339034499096e-03
+
+   30 KSP Residual norm 2.333872037946e-03
+   31 KSP Residual norm 2.333849957077e-03
+   32 KSP Residual norm 2.333782082864e-03
+   33 KSP Residual norm 2.333685439049e-03
+   34 KSP Residual norm 2.333570367923e-03
+   35 KSP Residual norm 2.333407953767e-03
+   36 KSP Residual norm 2.333295469524e-03
+   37 KSP Residual norm 2.332562747631e-03
+
+   38 KSP Residual norm 2.331400921175e-03
+   39 KSP Residual norm 2.328105784860e-03
+   40 KSP Residual norm 2.324739861627e-03
+   41 KSP Residual norm 2.317161141091e-03
+   42 KSP Residual norm 2.304199449620e-03
+   43 KSP Residual norm 2.293856849822e-03
+   44 KSP Residual norm 2.290619434997e-03
+   45 KSP Residual norm 2.287974384465e-03
+   46 KSP Residual norm 2.276278616198e-03
+   47 KSP Residual norm 2.260099470062e-03
+   48 KSP Residual norm 2.250637265859e-03
+   49 KSP Residual norm 2.243415145693e-03
+   50 KSP Residual norm 2.229433709327e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.00182938
+                     disp_y: 0.000132377
+                     disp_z: 0.00126737
+
+ 9 Nonlinear |R| = 2.229435e-03
+    0 KSP Residual norm 2.229434969123e-03
+
+    1 KSP Residual norm 2.229160922120e-03
+    2 KSP Residual norm 2.228810235633e-03
+    3 KSP Residual norm 2.227669879167e-03
+    4 KSP Residual norm 2.227295012860e-03
+    5 KSP Residual norm 2.226724770136e-03
+    6 KSP Residual norm 2.226146739533e-03
+    7 KSP Residual norm 2.221771157099e-03
+    8 KSP Residual norm 2.217795804743e-03
+    9 KSP Residual norm 2.212946251163e-03
+   10 KSP Residual norm 2.208341524398e-03
+   11 KSP Residual norm 2.200257838383e-03
+   12 KSP Residual norm 2.189496983519e-03
+
+   13 KSP Residual norm 2.183157979443e-03
+   14 KSP Residual norm 2.178984837909e-03
+   15 KSP Residual norm 2.176133430565e-03
+
+   16 KSP Residual norm 2.173120404292e-03
+   17 KSP Residual norm 2.172544613429e-03
+   18 KSP Residual norm 2.171869521182e-03
+   19 KSP Residual norm 2.171175481810e-03
+   20 KSP Residual norm 2.171148444665e-03
+   21 KSP Residual norm 2.166588996881e-03
+   22 KSP Residual norm 2.164509499003e-03
+   23 KSP Residual norm 2.152264873740e-03
+   24 KSP Residual norm 2.143824397790e-03
+   25 KSP Residual norm 2.138741579073e-03
+   26 KSP Residual norm 2.136171532984e-03
+   27 KSP Residual norm 2.135134696640e-03
+   28 KSP Residual norm 2.134191320409e-03
+   29 KSP Residual norm 2.130111669242e-03
+
+   30 KSP Residual norm 2.127608062029e-03
+   31 KSP Residual norm 2.127606382937e-03
+   32 KSP Residual norm 2.127565938763e-03
+   33 KSP Residual norm 2.127463189123e-03
+
+   34 KSP Residual norm 2.127444558729e-03
+   35 KSP Residual norm 2.127151140682e-03
+   36 KSP Residual norm 2.126890419581e-03
+   37 KSP Residual norm 2.126144389492e-03
+
+   38 KSP Residual norm 2.124070481859e-03
+   39 KSP Residual norm 2.117194779427e-03
+
+   40 KSP Residual norm 2.110880050450e-03
+   41 KSP Residual norm 2.097200518774e-03
+
+   42 KSP Residual norm 2.080509818288e-03
+   43 KSP Residual norm 2.066792997569e-03
+   44 KSP Residual norm 2.062818611117e-03
+
+   45 KSP Residual norm 2.060545510007e-03
+   46 KSP Residual norm 2.057351735381e-03
+   47 KSP Residual norm 2.053417691133e-03
+   48 KSP Residual norm 2.051947290045e-03
+   49 KSP Residual norm 2.049923776842e-03
+   50 KSP Residual norm 2.045395925481e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.00167821
+                     disp_y: 9.99453e-05
+                     disp_z: 0.00116501
+
+10 Nonlinear |R| = 2.045397e-03
+
+    0 KSP Residual norm 2.045396568061e-03
+
+    1 KSP Residual norm 2.045364552639e-03
+
+    2 KSP Residual norm 2.045288329670e-03
+    3 KSP Residual norm 2.045004749487e-03
+    4 KSP Residual norm 2.044859906208e-03
+    5 KSP Residual norm 2.044354063798e-03
+    6 KSP Residual norm 2.043877161469e-03
+    7 KSP Residual norm 2.042620133283e-03
+    8 KSP Residual norm 2.041194275878e-03
+    9 KSP Residual norm 2.039926670885e-03
+
+   10 KSP Residual norm 2.038304069800e-03
+   11 KSP Residual norm 2.031157621537e-03
+   12 KSP Residual norm 2.023947055045e-03
+   13 KSP Residual norm 2.020336404702e-03
+   14 KSP Residual norm 2.018911928257e-03
+   15 KSP Residual norm 2.017956118007e-03
+   16 KSP Residual norm 2.017553532575e-03
+   17 KSP Residual norm 2.017489277706e-03
+   18 KSP Residual norm 2.017412941076e-03
+   19 KSP Residual norm 2.016888847937e-03
+   20 KSP Residual norm 2.016183133573e-03
+   21 KSP Residual norm 2.010157263554e-03
+   22 KSP Residual norm 2.002248304927e-03
+   23 KSP Residual norm 1.989487159599e-03
+
+   24 KSP Residual norm 1.975897365472e-03
+   25 KSP Residual norm 1.966963200792e-03
+   26 KSP Residual norm 1.964202998833e-03
+   27 KSP Residual norm 1.961927865434e-03
+
+   28 KSP Residual norm 1.959440339725e-03
+   29 KSP Residual norm 1.953776246678e-03
+   30 KSP Residual norm 1.947683013832e-03
+   31 KSP Residual norm 1.947561034087e-03
+   32 KSP Residual norm 1.947259393386e-03
+   33 KSP Residual norm 1.946350027474e-03
+   34 KSP Residual norm 1.945407295940e-03
+   35 KSP Residual norm 1.943890679473e-03
+   36 KSP Residual norm 1.942060738608e-03
+   37 KSP Residual norm 1.938183464005e-03
+   38 KSP Residual norm 1.934033741400e-03
+   39 KSP Residual norm 1.924331978730e-03
+   40 KSP Residual norm 1.917861153191e-03
+   41 KSP Residual norm 1.906029756248e-03
+
+   42 KSP Residual norm 1.896211382660e-03
+   43 KSP Residual norm 1.890380989921e-03
+   44 KSP Residual norm 1.888026688677e-03
+   45 KSP Residual norm 1.886784428811e-03
+   46 KSP Residual norm 1.885129253093e-03
+   47 KSP Residual norm 1.884508307351e-03
+   48 KSP Residual norm 1.882550877158e-03
+   49 KSP Residual norm 1.880826513701e-03
+   50 KSP Residual norm 1.877817091113e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.00154217
+                     disp_y: 7.6393e-05
+                     disp_z: 0.00106868
+
+11 Nonlinear |R| = 1.877817e-03
+
+    0 KSP Residual norm 1.877817270183e-03
+
+    1 KSP Residual norm 1.877781143580e-03
+    2 KSP Residual norm 1.877710864898e-03
+    3 KSP Residual norm 1.877568945107e-03
+    4 KSP Residual norm 1.877568920240e-03
+
+    5 KSP Residual norm 1.877564242215e-03
+    6 KSP Residual norm 1.877493270830e-03
+    7 KSP Residual norm 1.876559992463e-03
+    8 KSP Residual norm 1.875624356422e-03
+    9 KSP Residual norm 1.875075157593e-03
+   10 KSP Residual norm 1.874158615223e-03
+   11 KSP Residual norm 1.868981560686e-03
+   12 KSP Residual norm 1.863284343368e-03
+   13 KSP Residual norm 1.857527484268e-03
+
+   14 KSP Residual norm 1.852505290833e-03
+   15 KSP Residual norm 1.849437030890e-03
+   16 KSP Residual norm 1.847061845791e-03
+   17 KSP Residual norm 1.844339297412e-03
+   18 KSP Residual norm 1.842294274569e-03
+   19 KSP Residual norm 1.839026448854e-03
+   20 KSP Residual norm 1.837947878676e-03
+   21 KSP Residual norm 1.827728930083e-03
+   22 KSP Residual norm 1.806331642792e-03
+   23 KSP Residual norm 1.741020568878e-03
+   24 KSP Residual norm 1.664878719616e-03
+   25 KSP Residual norm 1.575155761101e-03
+
+   26 KSP Residual norm 1.533873162889e-03
+   27 KSP Residual norm 1.510244474432e-03
+   28 KSP Residual norm 1.486062950131e-03
+   29 KSP Residual norm 1.461666954559e-03
+   30 KSP Residual norm 1.442703389491e-03
+
+   31 KSP Residual norm 1.442308287888e-03
+   32 KSP Residual norm 1.440784052374e-03
+   33 KSP Residual norm 1.432667600110e-03
+
+   34 KSP Residual norm 1.426698113169e-03
+   35 KSP Residual norm 1.419564665906e-03
+   36 KSP Residual norm 1.409735821246e-03
+   37 KSP Residual norm 1.393362265536e-03
+
+   38 KSP Residual norm 1.371357865788e-03
+   39 KSP Residual norm 1.340849942906e-03
+
+   40 KSP Residual norm 1.315891862049e-03
+   41 KSP Residual norm 1.293283766605e-03
+   42 KSP Residual norm 1.271402747775e-03
+   43 KSP Residual norm 1.263500846990e-03
+   44 KSP Residual norm 1.255283362331e-03
+   45 KSP Residual norm 1.250256965562e-03
+   46 KSP Residual norm 1.241274361272e-03
+   47 KSP Residual norm 1.229601914297e-03
+
+   48 KSP Residual norm 1.219551913392e-03
+
+   49 KSP Residual norm 1.215984383967e-03
+
+   50 KSP Residual norm 1.213942721422e-03
+    |residual|_2 of individual variables:
+                     disp_x: 0.000988203
+                     disp_y: 0.000132058
+                     disp_z: 0.000692583
+12 Nonlinear |R| = 1.213943e-03
+
+    0 KSP Residual norm 1.213942604535e-03
+
+    1 KSP Residual norm 1.213922559414e-03
+
+    2 KSP Residual norm 1.213810570563e-03
+    3 KSP Residual norm 1.213092276473e-03
+
+    4 KSP Residual norm 1.212928696191e-03
+
+    5 KSP Residual norm 1.212514954496e-03
+
+    6 KSP Residual norm 1.212047959476e-03
+Finished: Exit code: 0
